@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -11,7 +13,9 @@ export default function Home() {
         </div>
         <form className="flex flex-col space-y-4 bg-gray-50 px-4 py-8 sm:px-16">
           <button className="border-black bg-black text-white hover:bg-white hover:text-black flex h-10 w-full items-center justify-center rounded-md border text-sm transition-all focus:outline-none">
-            <p>login with spotify</p>
+            <Link href="/api/authorize">
+              <p>Login with Spotify</p>
+            </Link>
           </button>
         </form>
       </div>
